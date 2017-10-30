@@ -735,6 +735,20 @@ if (function_exists(custom_pagination)) {
 wp_reset_postdata();
 ?>
 ``` 
+#### Set up WP Multisite for FRESH WP INSTALL ONLY
+NOTE: 
+* backup your wp-config and .htaccess -> these files will be edited, and if you mess up, atleast you backed it up.
+* Here's a informative link for setup multisites: https://premium.wpmudev.org/blog/ultimate-guide-multisite/
+
+Steps:
+1. Install fresh WP Site. Find steps here for fresh install.
+2. Open wp-config.php; Paste this code: define('WP_ALLOW_MULTISITE', true); Above the line where it says: /* That's all, stop editing! Happy blogging. */
+3. Save the File. If you have the wp-admin dashboard logged in, logout then login again. 
+4. Once logged in, go to settings -> Network Setup
+5. You'll see a page asking for network name (a network is the environment of the sites), type of multisite (subdomain and subfolder, name is self explanatory), and email of admin, when done, click install.
+6. After that, you will be in a page that tells you to paste some code in wp-config.php and .htaccess. Read the instructions given and do so.
+7. Try to add a site at Sites->add New
+8. Playaround with installing plugins, network activating all, and themes.
 - - -
 
 # REST-Igniter Authorization
